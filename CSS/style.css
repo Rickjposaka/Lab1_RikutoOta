@@ -1,19 +1,122 @@
-/* CS465 Lab1 style file */
+/* CS465 Lab1 style file — white + orange (GitHub-ish) */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img { max-width: 100%; display: block; }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 20px;
-    line-height: 1.6;
+:root{
+  --bg: #ffffff;
+  --bg-muted: #f6f8fa;
+  --text: #222;
+  --text-muted: #555;
+  --border: #e5e7eb;
+  --link: #f97316;
+  --link-hover: #ea580c;
 }
 
-h1 {
-    color: #e3610b;
-    text-align: center;
+body{
+  font-family: Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-p {
-    color: #110864;
-    font-size: 16px;
-    margin-bottom: 10px;
+.visually-hidden{
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+}
+
+#site-nav{
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky; top: 0; z-index: 10;
+}
+
+#site-nav .brand{
+  font-weight: 700; font-size: 1.15rem;
+  text-decoration: none; color: var(--link);
+}
+
+#site-nav .nav{
+  list-style: none; display: flex; gap: 1.25rem;
+  margin: 0; padding: 0;
+}
+
+#site-nav .nav a{
+  text-decoration: none; color: #333; font-weight: 500;
+}
+#site-nav .nav a:hover{ color: var(--link); }
+
+#hero{
+  background: var(--bg-muted);
+  border-bottom: 1px solid var(--border);
+}
+#hero .hero-inner{
+  max-width: 1050px; margin: 0 auto; padding: 3rem 1.25rem;
+}
+#hero h1{
+  margin: 0 0 .75rem; font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: #111;
+}
+#hero .tagline{ color: var(--text-muted); margin: 0 0 1.25rem; }
+
+#cta{
+  display: flex; gap: .5rem; flex-wrap: wrap;
+  margin-bottom: .75rem;
+}
+#cta input{
+  padding: .6rem .75rem;
+  border: 1px solid #cbd5e1; border-radius: 6px;
+  min-width: 260px;
+}
+#cta button{
+  padding: .6rem 1rem; border: 0; border-radius: 6px;
+  background: var(--link); color: #fff; cursor: pointer;
+  font-weight: 600;
+}
+#cta button:hover{ background: var(--link-hover); }
+
+#hero .subnote{ color: var(--text-muted); margin: 0; }
+
+#content{
+  max-width: 1050px; margin: 2rem auto; padding: 0 1.25rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+.links{
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1rem 1.25rem;
+}
+.links h2{
+  margin: .25rem 0 1rem;
+  color: #111; border-bottom: 2px solid var(--link); padding-bottom: .35rem;
+}
+.links ul{ list-style: none; padding: 0; margin: 0; }
+.links li{ margin: .5rem 0; }
+.links a{ text-decoration: none; color: var(--link); }
+.links a:hover{ text-decoration: underline; }
+
+.icon-callout{
+  grid-column: 1 / -1; text-align: right; padding: .5rem 0;
+}
+.icon-link{ color: var(--link); text-decoration: none; font-weight: 600; }
+.icon-link:hover{ color: var(--link-hover); text-decoration: underline; }
+
+#site-footer{
+  border-top: 1px solid var(--border);
+  padding: 2rem 1rem; text-align: center; color: var(--text-muted);
+}
+.footer-links{
+  display: inline-flex; gap: 1rem; list-style: none; margin: 0 0 .5rem; padding: 0;
+}
+.footer-links a{ color: var(--link); text-decoration: none; }
+.footer-links a:hover{ text-decoration: underline; }
+
+@media (max-width: 640px){
+  #site-nav{ padding: .75rem 1rem; }
+  #site-nav .nav{ gap: .9rem; }
+  #hero .hero-inner{ padding: 2rem 1rem; }
 }

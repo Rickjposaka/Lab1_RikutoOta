@@ -1,19 +1,85 @@
 <!-- CS465 Lab1 HTML/index.html -->
-
+<!-- CS465 Lab1 HTML/index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Rikuto Ota - Lab 1</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-</head>
-<body>
-    <h1>Welcome to My Page</h1>
-    <p>Hello, my name is Rikuto Ota.</p>
-    <p>I am a Computer Science major at Southern New Hampshire University.</p>
-    <p>I am from Osaka, Japan, and I enjoy traveling around Japan.</p>
-    <p>This is my Lab 1 project for CS465. I have enjoyed learning web development and exploring new technologies.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Japanese Food Store – Lab 1</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <body>
+    <nav id="site-nav" aria-label="Primary">
+      <a class="brand" href="#">NihonFoods</a>
+      <ul class="nav">
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">Stores</a></li>
+        <li><a href="#">Sign in</a></li>
+      </ul>
+    </nav>
+
+    <header id="hero">
+      <h1>Authentic Japanese Food, Delivered in the U.S.</h1>
+      <p class="tagline">
+        From sushi rice to ramen – taste Japan at your home.
+      </p>
+
+      <form id="cta" action="#" method="post">
+        <label class="visually-hidden" for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" />
+        <button type="submit">Subscribe</button>
+      </form>
+
+      <p class="subnote">
+        First order? <strong>Get 10% off</strong> when you sign up today!
+      </p>
+    </header>
+
+    <main id="content" aria-label="Main content">
+      <section class="links">
+        <h2>Popular Items</h2>
+        <ul>
+          <li><a href="#">Premium Sushi Rice</a></li>
+          <li><a href="#">Matcha Green Tea</a></li>
+          <li><a href="#">Instant Ramen Set</a></li>
+          <li><a href="#">Soy Sauce Collection</a></li>
+          <li><a href="#">Japanese Snacks Box</a></li>
+        </ul>
+      </section>
+
+      <section class="links">
+        <h2>Recipes</h2>
+        <ul>
+          <li><a href="#">Homemade Miso Soup</a></li>
+          <li><a href="#">Sushi Rolls for Beginners</a></li>
+          <li><a href="#">Okonomiyaki (Japanese Pancake)</a></li>
+          <li><a href="#">Matcha Latte</a></li>
+          <li><a href="#">Takoyaki Party</a></li>
+        </ul>
+      </section>
+
+      <section class="links">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="#">Store Locator</a></li>
+          <li><a href="#">Cultural Articles</a></li>
+          <li><a href="#">Seasonal Specials</a></li>
+          <li><a href="#">Gift Ideas</a></li>
+          <li><a href="#">Cooking Classes</a></li>
+        </ul>
+      </section>
+
+      <p class="icon-callout"><a href="#" class="icon-link">Download Catalog</a></p>
+    </main>
+
+    <footer id="site-footer" aria-label="Footer">
+      <ul class="footer-links">
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+      <small>&copy; 2025 NihonFoods – Authentic Japanese Food</small>
+    </footer>
+  </body>
 </html>
-
-
